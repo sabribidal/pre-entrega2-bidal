@@ -1,0 +1,98 @@
+/* General */
+ul{list-style-type: none;}
+a{text-decoration: none;color: white;transition: 1s all;}
+a:hover{background-color: rgb(40, 39, 39);padding: 4px;border-radius: 10px;}
+li{padding: 20px;margin: 20px;}
+header{background-color: black;}
+.logo{width: 100px;height: 100px;}
+body{font-family: 'Abel', sans-serif;margin: 0;padding: 0;}
+img{max-width: 100%;max-height: 100%;}
+button:hover{cursor: pointer;}
+
+/* VISTA DESKTOP */
+@media (min-width:1024px){
+    header, ul{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+    /* Home */
+    .gridHome{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main";
+        grid-template-columns: 100%;
+        grid-template-rows: 133px auto;
+    }
+    .home{grid-area: header;}
+    .inicio{grid-area: main;background-image: url(../imagenes/Bathroom.jpg);height: 100vh;width: 100%;background-position: center;background-size: cover;}
+    .inicio h1{margin-top: 250px;margin-left: 100px;color: white;}
+    .inicio a{margin-left: 100px;background-color: rgb(195, 169, 139);color: black;padding: 7px;border-radius: 10px;}
+    /* Nosotros */
+    .nosotros{display: flex;margin-top: 30px;margin-right: 1cm;margin-left: 1cm;}
+    .nosotros h1{margin-top: 0;}
+    .nosotros h2 {margin-top: 25px;margin-bottom: 8px;}
+    .proyectamos .gestionamos{margin-top: 0;margin-bottom: 0;}
+    .dirigimos{margin-bottom: 30px;}
+    .nosotros a{background-color: rgb(195, 169, 139);color: black;padding: 7px;border-radius: 10px;}
+    .living{width: 400px;height: 400px;float: right;margin-left: 50px;}
+    /* Proyectos */
+    .proyectos{background-color: black;}
+    .gridCards{
+        display: grid;
+        grid-template-areas: 
+        "card1 card2 card3 card4";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto;
+    }
+    .card1{grid-area: card1;}
+    .card2{grid-area: card2;}
+    .card3{grid-area: card3;}
+    .card4{grid-area: card4;}
+    .img2{width: 331.5px;height: 414.38px;}
+    .cards{margin: 5px;}
+    .cards input{background-color: rgb(195, 169, 139);color: black;padding: 7px;border-radius: 10px;}
+    .cards h1{color: white;}
+    /* Contacto */
+    .contacto{display: flex;flex-direction: row;justify-content: space-between;margin-left: 3cm;}
+    .mainContacto{margin-top: 30px;}
+    .conocerte{margin-left: 3cm;}
+    .blanco{width: 400px;height: 400px;}
+    .enviar{background-color: rgb(195, 169, 139);color: black;padding: 7px;border-radius: 10px;}
+    /* Premios */
+    .premios{display: flex;flex-direction: row;justify-content: space-evenly;}
+    .premios1{display: flex;flex-direction: column;margin-left: 1cm;margin-right: 1cm;}
+    .premios img{margin: 5px;width: 300px;height: 350px;}
+}
+
+/* VISTA MOBILE */
+@media (max-width:768px){
+    ul{display: flex;flex-direction: row;justify-content: center;padding-left: 0;}
+    li{padding: 6px;margin: 2px;}
+    header{display: flex;flex-direction: column;align-items: center;}
+    .inicio{grid-area: main;background-image: url(../imagenes/Bathroom.jpg);height: 100vh;width: 100%;background-position: center;background-size: cover;}
+    .inicio h1{color: white;margin: 0;padding-top: 100px;margin-left: 1cm;margin-bottom: 10px;}
+    .inicio a{margin-left: 100px;background-color: rgb(195, 169, 139);color: black;padding: 7px;border-radius: 10px;}
+    /* Nosotro */
+    .nosotros{display: flex;flex-direction: column;margin-top: 30px;margin-right: 1cm;margin-left: 1cm;}
+    .nosotros h1{margin-top: 0;}
+    .nosotros h2 {margin-top: 25px;margin-bottom: 8px;}
+    .proyectamos .gestionamos{margin-top: 0;margin-bottom: 0;}
+    .dirigimos{margin-bottom: 30px;}
+    .nosotros a{background-color: rgb(195, 169, 139);color: black;padding: 7px;border-radius: 10px;}
+    .living{width: 100%;height: auto;margin-top: 20px;}
+    
+    .proyectos{background-color: black;}
+    .gridCards{display: flex;flex-direction: column;}
+    .gridCards img{width: 100%;height: auto;}
+    .cards{margin: 5px;margin-bottom: 30px;}
+    .cards input{background-color: rgb(195, 169, 139);color: black;padding: 7px;border-radius: 10px;}
+    .cards h1{color: white;}
+
+    .contacto{display: flex;flex-direction: column;justify-content: space-between;margin-left: 1cm;margin-right: 1cm;align-items: center;}
+    .mainContacto{margin-top: 30px;}
+    .conocerte{margin-left: 1cm;}
+    .blanco{width: 100%;height: auto;margin-top: 20px;}
+    .enviar{background-color: rgb(195, 169, 139);color: black;padding: 7px;border-radius: 10px;}
+
+    .premios{display: flex;flex-direction: column;align-items: center;}
+    .premios1{display: flex;flex-direction: column;margin-left: 1cm;margin-right: 1cm;}
+    .premios img{margin: 5px;width: 300px;height: 350px;}
+}
